@@ -1,5 +1,11 @@
 from setuptools import setup
 
+testing_extras = [
+    'pytest',
+    'pytest-cov'
+]
+
+
 setup(
     name='python-flask-api',
     version='0.1',
@@ -12,4 +18,9 @@ setup(
     keywords='API, MongoDB',
     include_package_data=True,
     zip_safe=False,
+    setup_requires=['pytest-runner'],
+    tests_require=['pytest'],
+    extras_require={
+        'testing': testing_extras,
+    },
 )
