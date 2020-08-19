@@ -1,3 +1,7 @@
+GIT_CURRENT_BRANCH := ${shell git symbolic-ref --short HEAD}
+
+.PHONY: help clean test clean-build isort run
+
 .DEFAULT: help
 
 help:

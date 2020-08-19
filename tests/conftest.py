@@ -7,6 +7,7 @@ _ENV_FILE = join(dirname(__file__), '../.env')
 if isfile(_ENV_FILE):
     load_dotenv(dotenv_path=_ENV_FILE)
 
+
 # Cria uma fixture que será utilizada no escopo sessão
 # ou seja a cada execução do comando pytest
 @pytest.fixture(scope='session')
